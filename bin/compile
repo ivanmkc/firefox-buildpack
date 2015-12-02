@@ -6,15 +6,15 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # config
-VERSION=29.0
+VERSION=42.0
 LANG=en-US
-PLATFORM=linux64
+PLATFORM=linux-x86_64
 # PLATFORM=linux
 
 # Buildpack URL
 ARCHIVE_NAME=firefox
 FILE_NAME=${ARCHIVE_NAME}-${VERSION}.tar.bz2
-BUILDPACK_FIREFOX_PACKAGE="https://download.mozilla.org/?product=firefox-${VERSION}-SSL&os=linux&lang=${LANG}"
+BUILDPACK_FIREFOX_PACKAGE="https://ftp.mozilla.org/pub/firefox/releases/${VERSION}/${PLATFORM}/${LANG}/firefox-${VERSION}.tar.bz2"
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
